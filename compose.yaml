@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: "bitnami/postgresql:16"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=pass
+      - POSTGRESQL_DATABASE=enantra
+    volumes:
+      - "postgres_data:/bitnami/postgresql"
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+volumes:
+  postgres_data:
