@@ -1,8 +1,10 @@
 import { Button, Card, CardFooter, CardHeader } from "@nextui-org/react";
+import { Minus, Plus } from "lucide-react";
 
 interface TicketCardProps {
   name: string;
   bestSeller?: boolean;
+  price: string;
 }
 
 export default function TicketCard(props: TicketCardProps) {
@@ -20,13 +22,15 @@ export default function TicketCard(props: TicketCardProps) {
         <h4 className="text-2xl font-medium">{props.name}</h4>
       </CardHeader>
       <CardFooter className="border-t-1 absolute bottom-0 z-10 justify-between border-zinc-100/50 bg-white/30">
-        <div>
-          <p className="text-tiny">Available soon.</p>
-          <p className="text-tiny">Get notified.</p>
+        <p className="font-bold">{props.price}</p>
+        <div className="flex items-center gap-2">
+          <Button className="text-tiny" color="primary" radius="full" size="sm">
+            <Plus className="h-6 w-6" />
+          </Button>
+          <Button className="text-tiny" color="primary" radius="full" size="sm">
+            <Minus className="h-6 w-6" />
+          </Button>
         </div>
-        <Button className="text-tiny" color="primary" radius="full" size="sm">
-          Notify Me
-        </Button>
       </CardFooter>
     </Card>
   );
