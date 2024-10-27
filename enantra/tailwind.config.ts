@@ -1,5 +1,6 @@
 // tailwind.config.js
 import { nextui } from "@nextui-org/react";
+import tailwindHeroPatterns from "tailwind-heropatterns";
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -14,6 +15,19 @@ const config = {
   },
   darkMode: "class",
   plugins: [
+    tailwindHeroPatterns({
+      variants: [],
+      patterns: ["tic-tac-toe", "texture", "jigsaw"],
+      // The foreground colors of the pattern
+      colors: {
+        default: "#454443",
+      },
+
+      // The foreground opacity
+      opacity: {
+        default: "0.5",
+      },
+    }),
     nextui({
       themes: {
         light: {

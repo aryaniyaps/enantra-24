@@ -117,6 +117,9 @@ importers:
       prisma:
         specifier: ^5.14.0
         version: 5.21.1
+      tailwind-heropatterns:
+        specifier: ^0.0.8
+        version: 0.0.8
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.14
@@ -2937,6 +2940,9 @@ packages:
   lodash.omit@4.5.0:
     resolution: {integrity: sha512-XeqSp49hNGmlkj2EJlfrQFIzQ6lXdNro9sddtQzcJY8QaoC2GO0DT7xaIokHeyM+mIT0mPMlPvkYzg2xCuHdZg==}
 
+  lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
     engines: {node: '>=10'}
@@ -3650,6 +3656,9 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  tailwind-heropatterns@0.0.8:
+    resolution: {integrity: sha512-no7lc5K9TF5Jy8GyfIq/F1/nS2HbwGPObwaeauRQJLZybE41BkCCVyew23O1m3ljYSE436YwHdNuphxfKF7ZgA==}
 
   tailwind-merge@1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
@@ -7650,6 +7659,8 @@ snapshots:
 
   lodash.omit@4.5.0: {}
 
+  lodash@4.17.21: {}
+
   log-symbols@4.1.0:
     dependencies:
       chalk: 4.1.2
@@ -8374,6 +8385,10 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  tailwind-heropatterns@0.0.8:
+    dependencies:
+      lodash: 4.17.21
 
   tailwind-merge@1.14.0: {}
 

@@ -20,11 +20,12 @@ export default function Hero() {
             Last date to register - November 22
           </span>
           <h1 className="mx-auto text-pretty text-4xl font-medium tracking-tighter md:text-6xl">
-            The Biggest Entrepreneurship Fest in Anna University is here!
+            The Biggest Entrepreneurship Fest in Anna University is back!
           </h1>
           <p className="text-foreground/85 mx-auto max-w-2xl text-balance text-lg font-semibold">
             <Typewriter
-              words={["November 20, 30, December 1"]}
+              words={["November 29, 30, December 1"]}
+              loop={1}
               cursor
               cursorStyle="_"
               typeSpeed={70}
