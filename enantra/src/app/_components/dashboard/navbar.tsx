@@ -1,5 +1,4 @@
 "use client";
-import { APP_NAME } from "@/utils/constants";
 import { getGravatarUrl } from "@/utils/gravatar";
 import {
   Avatar,
@@ -9,7 +8,6 @@ import {
   DropdownMenu,
   DropdownTrigger,
   Navbar,
-  NavbarBrand,
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
@@ -22,11 +20,6 @@ import { ThemeSwitcher } from "../theme-switcher";
 export default function DashboardNavbar({ session }: { session: Session }) {
   return (
     <Navbar isBordered>
-      <NavbarBrand>
-        <Link href="/" className="font-bold text-inherit">
-          {APP_NAME}
-        </Link>
-      </NavbarBrand>
       <NavbarContent className="hidden gap-8 sm:flex" justify="start">
         <NavbarItem>
           <Link color="foreground" href="/dashboard">
