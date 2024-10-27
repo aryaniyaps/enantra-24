@@ -1,4 +1,4 @@
-export const APP_NAME = "Enantra";
+export const APP_NAME = "Enantra 2024";
 
 export const APP_TAGLINE = "";
 

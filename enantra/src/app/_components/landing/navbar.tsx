@@ -8,6 +8,7 @@ import {
 } from "@nextui-org/react";
 import type { Session } from "next-auth";
 import Link from "next/link";
+import { ThemeSwitcher } from "../theme-switcher";
 
 export default function AppNavbar({ session }: { session: Session | null }) {
   return (
@@ -15,24 +16,27 @@ export default function AppNavbar({ session }: { session: Session | null }) {
       <NavbarBrand>
         <p className="font-bold text-inherit">{APP_NAME}</p>
       </NavbarBrand>
-      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+      <NavbarContent className="hidden gap-8 sm:flex" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#events">
             Events
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link href="#sponsors" aria-current="page">
             Sponsors
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#team">
             Team
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <ThemeSwitcher />
+        </NavbarItem>
         {session ? (
           <NavbarItem>{session.user.email}</NavbarItem>
         ) : (
