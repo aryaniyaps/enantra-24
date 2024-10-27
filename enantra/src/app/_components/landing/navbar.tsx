@@ -1,4 +1,4 @@
-import { APP_NAME } from "@/utils/constants";
+import { APP_NAME, INSTAGRAM_URL, LINKEDIN_URL } from "@/utils/constants";
 import {
   Button,
   Navbar,
@@ -6,6 +6,7 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
+import { Instagram, Linkedin } from "lucide-react";
 import type { Session } from "next-auth";
 import Link from "next/link";
 import { ThemeSwitcher } from "../theme-switcher";
@@ -14,7 +15,9 @@ export default function AppNavbar({ session }: { session: Session | null }) {
   return (
     <Navbar isBordered shouldHideOnScroll>
       <NavbarBrand>
-        <p className="font-bold text-inherit">{APP_NAME}</p>
+        <Link href="/" className="font-bold text-inherit">
+          {APP_NAME}
+        </Link>
       </NavbarBrand>
       <NavbarContent className="hidden gap-8 sm:flex" justify="center">
         <NavbarItem>
@@ -30,6 +33,16 @@ export default function AppNavbar({ session }: { session: Session | null }) {
         <NavbarItem>
           <Link color="foreground" href="#team">
             Team
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href={INSTAGRAM_URL} target="_blank">
+            <Instagram className="h-6 w-6" />
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href={LINKEDIN_URL} target="_blank">
+            <Linkedin className="h-6 w-6" />
           </Link>
         </NavbarItem>
       </NavbarContent>

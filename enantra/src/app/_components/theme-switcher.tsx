@@ -13,11 +13,10 @@ export function ThemeSwitcher() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) return <Switch disabled />;
 
   return (
     <Switch
-      color="default"
       isSelected={theme === "dark"}
       onValueChange={(value) => setTheme(value ? "dark" : "light")}
     />
