@@ -17,10 +17,11 @@ const config = {
   plugins: [
     tailwindHeroPatterns({
       variants: [],
-      patterns: ["texture"],
+      patterns: ["texture", "squares", "autumn", "glamorous"],
       // The foreground colors of the pattern
       colors: {
-        default: "#454443",
+        dark: "#454443",
+        light: "#cfcfcf",
       },
 
       // The foreground opacity

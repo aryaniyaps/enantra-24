@@ -24,7 +24,7 @@ export default function Hero() {
           </h1>
           <p className="text-foreground/85 mx-auto max-w-2xl text-balance text-lg font-semibold">
             <Typewriter
-              words={["November 29, 30, December 1"]}
+              words={["November 29, 30, December 01"]}
               loop={1}
               cursor
               cursorStyle="_"

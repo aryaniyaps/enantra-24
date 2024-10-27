@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <main className="bg-hero-texture flex h-full w-full flex-col">
+      <main className="bg-hero-glamorous-light dark:bg-hero-glamorous-dark flex h-full w-full flex-col">
         <Navbar session={session} />
         <Hero />
         <Sponsors />
