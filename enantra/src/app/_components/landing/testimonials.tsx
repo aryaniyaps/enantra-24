@@ -73,7 +73,7 @@ const TESTIMONIALS = [
 export default function Testimonials() {
   return (
     <motion.div
-      className="from-primary-100 flex w-full flex-col items-center bg-gradient-to-b py-8"
+      className="from-primary-100 flex w-full flex-col items-center gap-3 bg-gradient-to-b py-8"
       initial={{ y: 20, opacity: 0 }}
       whileInView={{
         y: 0,
