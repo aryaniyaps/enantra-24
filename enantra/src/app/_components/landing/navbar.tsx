@@ -36,6 +36,8 @@ export default function AppNavbar({ session }: { session: Session | null }) {
             Team
           </Link>
         </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
         <NavbarItem>
           <Link href={INSTAGRAM_URL} target="_blank">
             <Instagram className="h-6 w-6" />
@@ -46,8 +48,6 @@ export default function AppNavbar({ session }: { session: Session | null }) {
             <Linkedin className="h-6 w-6" />
           </Link>
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
