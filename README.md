@@ -22,6 +22,7 @@ Before setting up the project, make sure you have the following installed:
 - [Node.js](https://nodejs.org/) (v20.x or later)
 - [pnpm](https://pnpm.io/) (v9.x or later)
 - [Prisma CLI](https://www.prisma.io/docs/getting-started)
+- [Docker Engine](https://docs.docker.com/engine/)
 
 Set environment variables following the [reference template](./ausec-quizzer/.env.example)
 
@@ -42,23 +43,29 @@ Follow these steps to get the project up and running locally:
    pnpm install
    ```
 
-3. **Set up the database**:
+3. **Set up the environment variables**:
 
-   - Create your database and add the connection URL in the `.env` file as `DATABASE_URL`.
+   - Setup a `.env` file following the [reference template](./enantra/.env.example)
 
-4. **Generate Prisma Client**:
+4. **Start Docker Compose**:
+
+```bash
+    docker compose up
+```
+
+5. **Generate Prisma Client**:
 
    ```bash
    npm run db:generate
    ```
 
-5. **Run the development server**:
+6. **Run the development server**:
 
    ```bash
    npm run dev
    ```
 
-6. **Open the app in your browser**:
+7. **Open the app in your browser**:
    The app will be running at [http://localhost:3000](http://localhost:3000).
 
 ## Available Scripts
