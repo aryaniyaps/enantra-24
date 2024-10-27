@@ -5,6 +5,7 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  Link as NextUILink,
 } from "@nextui-org/react";
 import { Instagram, Linkedin } from "lucide-react";
 import type { Session } from "next-auth";
@@ -51,7 +52,11 @@ export default function AppNavbar({ session }: { session: Session | null }) {
           <ThemeSwitcher />
         </NavbarItem>
         {session ? (
-          <NavbarItem>{session.user.email}</NavbarItem>
+          <NavbarItem>
+            <NextUILink isBlock showAnchorIcon href="/dashboard">
+              My Dashboard
+            </NextUILink>
+          </NavbarItem>
         ) : (
           <NavbarItem>
             <Button

@@ -17,7 +17,7 @@ const config = {
   plugins: [
     tailwindHeroPatterns({
       variants: [],
-      patterns: ["tic-tac-toe", "texture", "jigsaw"],
+      patterns: ["texture"],
       // The foreground colors of the pattern
       colors: {
         default: "#454443",
@@ -25,7 +25,7 @@ const config = {
 
       // The foreground opacity
       opacity: {
-        default: "0.5",
+        default: "0.25",
       },
     }),
     nextui({
