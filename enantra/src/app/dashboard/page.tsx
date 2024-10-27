@@ -19,13 +19,13 @@ export default async function DashboardPage() {
 
       {/* Header text */}
       <h2 className="text-xl font-semibold">
-        You haven't purchased any tickets yet!
+        You haven&apos;t purchased any tickets yet!
       </h2>
 
       {/* Description */}
       <p className="text-foreground/65 max-w-md text-center">
-        Looks like you haven't made any plans just yet. Explore our upcoming
-        events and get your first ticket to start your journey.
+        Looks like you haven&apos;t made any plans just yet. Explore our
+        upcoming events and get your first ticket to start your journey.
       </p>
 
       {/* CTA Button */}
