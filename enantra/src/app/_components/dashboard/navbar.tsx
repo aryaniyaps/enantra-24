@@ -17,17 +17,32 @@ import { ChevronDown, LogOut } from "lucide-react";
 import type { Session } from "next-auth";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
+import { ThemeSwitcher } from "../theme-switcher";
 
 export default function DashboardNavbar({ session }: { session: Session }) {
   return (
-    <Navbar isBordered shouldHideOnScroll>
+    <Navbar isBordered>
       <NavbarBrand>
         <Link href="/" className="font-bold text-inherit">
           {APP_NAME}
         </Link>
       </NavbarBrand>
-
+      <NavbarContent className="hidden gap-8 sm:flex" justify="start">
+        <NavbarItem>
+          <Link color="foreground" href="/dashboard">
+            My Tickets
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/dashboard/purchase">
+            Purchase
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <ThemeSwitcher />
+        </NavbarItem>
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
